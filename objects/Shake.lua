@@ -1,7 +1,6 @@
 Shake = Object:extend()
 
 function Shake:new(amplitude, frequency, duration)
-
     self.amplitude = amplitude
     self.frequency = frequency
     self.duration = duration
@@ -40,11 +39,4 @@ end
 function Shake:decay(t)
     if t > self.duration then return 0 end
     return (self.duration - t)/self.duration
-end
-
-function random(min, max)
-    local min = min or 0
-    local max = max or 1
-
-    return (min > max and (love.math.random()*(min - max) + max)) or (love.math.random()*(max - min) + min)
 end

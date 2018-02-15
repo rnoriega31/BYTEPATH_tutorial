@@ -3,6 +3,9 @@ Input  = require 'libraries/boipushy/Input'
 Timer  = require 'libraries/enhanced_timer/EnhancedTimer'
 Camera = require 'libraries/hump/camera'
 
+require 'GameObject'
+require 'utils'
+
 function love.load()
     -- Game resolution setup
     resize(3)
@@ -52,7 +55,7 @@ function love.draw()
     if current_room then current_room:draw() end
 
     -- Miscellaneous
-    love.graphics.circle('line', gw/2, gh/2, 50)
+    --love.graphics.circle('line', gw/2, gh/2, 50)
 end
 
 -------------------------------------------------------------------------------
