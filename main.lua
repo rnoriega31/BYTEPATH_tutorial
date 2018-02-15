@@ -14,6 +14,11 @@ function love.load()
     recursiveEnumerate('objects', object_files)
     requireFiles(object_files)
 
+    -- Load rooms
+    local room_files = {}
+    recursiveEnumerate('rooms', room_files)
+    requireFiles(room_files)
+
     -- Global timer setup
     timer = Timer()
 
